@@ -1,32 +1,76 @@
 pipeline {
   agent any
   stages {
-    stage('asdf') {
+    stage('UnitTests') {
       parallel {
-        stage('asdf') {
+        stage('unit1') {
           steps {
             echo 'fdsa'
           }
         }
-        stage('asdf') {
+        stage('unit2') {
           steps {
             echo 'fdsa'
           }
         }
       }
     }
-    stage('gg') {
+    stage('SettingUpNodes') {
       parallel {
-        stage('gg') {
+        stage('client') {
           steps {
             echo 'ggfdsa'
           }
         }
-        stage('news') {
+        stage('Peer0') {
           steps {
             echo 'news'
           }
         }
+        stage('Peer1') {
+          steps {
+            echo 'fdsa'
+          }
+        }
+        stage('Peer2') {
+          steps {
+            echo 'fdsa'
+          }
+        }
+        stage('Peer3') {
+          steps {
+            echo 'fdsa'
+          }
+        }
+      }
+    }
+    stage('sendTx') {
+      parallel {
+        stage('toPeer0') {
+          steps {
+            echo 'txtxtx'
+          }
+        }
+        stage('toPeer1') {
+          steps {
+            echo 'dsa'
+          }
+        }
+        stage('toPeer2') {
+          steps {
+            echo 'txttrxtxtx'
+          }
+        }
+      }
+    }
+    stage('LeaderComplaint') {
+      steps {
+        echo '...'
+      }
+    }
+    stage('Success!') {
+      steps {
+        echo '...'
       }
     }
   }
