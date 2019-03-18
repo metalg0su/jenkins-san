@@ -16,8 +16,17 @@ pipeline {
       }
     }
     stage('gg') {
-      steps {
-        echo 'ggfdsa'
+      parallel {
+        stage('gg') {
+          steps {
+            echo 'ggfdsa'
+          }
+        }
+        stage('news') {
+          steps {
+            echo 'news'
+          }
+        }
       }
     }
   }
