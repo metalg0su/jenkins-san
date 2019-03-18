@@ -1,2 +1,4 @@
 1
 2
+super-smart-jenkins.
+when change found, starts build.
